@@ -1,7 +1,5 @@
-FROM alpine:3.10
+FROM php:7.4-cli
 
-COPY LICENSE README.md /
+COPY . /usr/local/bin
 
-COPY entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "php", "/usr/local/bin/main.php" ]
